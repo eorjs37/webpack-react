@@ -21,6 +21,13 @@ npm install --save-dev typescript ts-loader source-map-loader
 ## react-hook
 
 ### useState
+```
+useState 를 통해 컴퍼넌트의 변수를 바꿀 수 있다.
+```
+
+```javascript
+const [number,setNumber] = useState(0);
+```
 
 ### useReducer
 
