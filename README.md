@@ -10,3 +10,10 @@ npm install --save-dev html-loader
 npm install --save-dev html-webpack-plugin
 npm install --save-dev webpack-dev-server
 ```
+
+## typescript
+
+```bash
+npm install --save-dev @types/react @types/react-dom
+npm install --save-dev typescript ts-loader source-map-loader
+```
