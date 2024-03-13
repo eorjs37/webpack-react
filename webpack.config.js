@@ -1,20 +1,37 @@
-const path = require("path");
-const getAbsolutePath = (pathDir) => path.resolve(__dirname, pathDir);
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = (_env, argv) => {
-  const isProd = argv.mode === "production";
-  const isDev = !isProd;
-
-  return {
-    entry: {
-      main: "./src/index.js",
-    },
-    output: {
-      path: getAbsolutePath("dist"),
-      filename: "assets/js/[name].[contenthash:8].js",
-      publicPath: "/",
-    },
-    mode: "development",
-    devtool: isDev && "cheap-module-source-map",
-  };
-};
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react']
+        }
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+        options: {
+          minimize: true,
+        },
+      },
+    ]
+  },
+  devServer: {
+    host: 'localhost',
+    port: 3000,
+    open: true,
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html'
+    })
+  ]
+}
