@@ -6,7 +6,7 @@ module.exports = {
   devtool: "source-map",
   resolve: {
     // 확인 가능한 확장자로 '.ts' 와 '.tsx' 를 추가합니다.
-    extensions: [".ts", ".tsx"]
+    extensions: [".js", ".ts", ".tsx"]
   },
   entry: './src/index.js',
   output: {
@@ -14,6 +14,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
       {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
