@@ -28,7 +28,7 @@ export default function App() {
       <button onClick={handleNavigate}>PageOne 이동</button>
       <Routes>
         <Route path="/pageone" element={<PageOne />}>
-          <Route path="/pageone/subpageone" element={<SubPageOne />} />
+          <Route path="subpageone" element={<SubPageOne />} />
         </Route>
       </Routes>
     </div>
