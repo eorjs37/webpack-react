@@ -53,6 +53,7 @@ module.exports = {
     host: 'localhost',
     port: 3000,
     open: true,
+    historyApiFallback:true
   },
   plugins: [
     new HtmlWebpackPlugin({
