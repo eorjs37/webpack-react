@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack",
     "dev": "webpack-dev-server",
-    "build":"npx webpack"
+    "build": "npx webpack",
+    "electronstart":"electron ."
   },
   "keywords": [],
   "author": "CHOI DAE GEON",
@@ -16,6 +17,7 @@
     "@types/react": "^18.2.65",
     "@types/react-dom": "^18.2.21",
     "css-loader": "^6.10.0",
+    "electron": "^29.1.4",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
