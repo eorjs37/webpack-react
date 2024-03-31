@@ -2,12 +2,13 @@
   "name": "webpack-react",
   "version": "1.0.0",
   "description": "React App",
-  "main": "index.js",
+  "main": "public/electron.js",
+  "homepage": "./",
   "scripts": {
     "start": "webpack",
     "dev": "webpack-dev-server",
     "build": "npx webpack",
-    "electronstart":"electron ."
+    "electronstart": "ELECTRON_START_URL=http://localhost:3000 electron ."
   },
   "keywords": [],
   "author": "CHOI DAE GEON",
@@ -35,6 +36,7 @@
     "webpack-dev-server": "^5.0.3"
   },
   "dependencies": {
+    "electron-builder": "^24.13.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3"
